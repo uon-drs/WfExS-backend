@@ -1885,11 +1885,12 @@ you can find here an almost complete list of the possible ones:
                     )
 
                 else:
-                    raise ROCrateGenerationException(
-                        "FIXME: Unsupported http(s) git repository {}".format(
-                            remote_repo.repo_url
-                        )
-                    )
+                    do_attach = True
+                    # raise ROCrateGenerationException(
+                    #     "FIXME: Unsupported http(s) git repository {}".format(
+                    #         remote_repo.repo_url
+                    #     )
+                    # )
         else:
             # If there is no information about the remote origin
             # of the workflow, better keep a copy in the RO-Crate
