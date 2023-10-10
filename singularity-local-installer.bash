@@ -116,6 +116,6 @@ rm "${downloadDir}/${singularityBundle}"
 cd "${downloadDir}"/"${singularityBundlePrefix}"
 
 # Now, the right moment to compile and install rootless singularity
-./mconfig -b ./builddir --without-suid --prefix="${envDir}"
+./mconfig -b ./builddir --without-suid --without-seccomp --without-conmon --prefix="${envDir}"
 make -C ./builddir
 make -C ./builddir install
